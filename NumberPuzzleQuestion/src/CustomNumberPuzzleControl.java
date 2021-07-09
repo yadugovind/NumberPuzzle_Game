@@ -42,7 +42,7 @@ class CustomNumberPuzzleControl extends NumberPuzzleControl {
 			if(buttons[i]==buttonClicked)
 				buttonClickedId=i;
 				}
-		System.out.println(buttonClickedId);		
+		//System.out.println(buttonClickedId);		
 		if(Math.abs(buttonClickedId-emptyCellId)==1||emptyCellId+4==buttonClickedId||emptyCellId-4==buttonClickedId){
 			swapButton(buttons[emptyCellId],buttonClicked);
 			emptyCellId=buttonClickedId;
@@ -88,6 +88,7 @@ class CustomNumberPuzzleControl extends NumberPuzzleControl {
 		for(int i=0;i<15;++i){
 			if(buttonId[i]!=i+1)
 				winner=false;
+				break;
 		}
 
 		return winner;
